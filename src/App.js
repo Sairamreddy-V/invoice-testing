@@ -8,6 +8,8 @@ import {
   pdf,
 } from "@react-pdf/renderer";
 
+import Invoice from "./invoice";
+
 // Define styles for the document
 const styles = StyleSheet.create({
   page: {
@@ -101,6 +103,7 @@ const MyDocument = () => (
 // };
 
 const generatePDF = () => {
+  console.log(`entered`);
   const blob = pdf(<MyDocument />).toBlob(); // Generates PDF blob
 
   blob
